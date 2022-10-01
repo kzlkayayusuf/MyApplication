@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.google.gson.GsonBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, getString(R.string.action_message), Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+
+        val gson = GsonBuilder().create()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -53,4 +56,5 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
+
 }
