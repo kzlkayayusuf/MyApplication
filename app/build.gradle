@@ -37,6 +37,7 @@ android {
     productFlavors {
         google {
             dimension 'app_store'
+            applicationId '.google'
         }
         amazon {
             dimension 'app_store'
