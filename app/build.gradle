@@ -33,6 +33,16 @@ android {
     buildFeatures {
         viewBinding true
     }
+    flavorDimensions 'app_store'
+    productFlavors {
+        google {
+            dimension 'app_store'
+        }
+        amazon {
+            dimension 'app_store'
+            applicationId '.amazon'
+        }
+    }
 }
 
 dependencies {
