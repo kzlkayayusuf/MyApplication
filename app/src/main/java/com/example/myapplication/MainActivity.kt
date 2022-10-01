@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.utilities.StringUtility
 import com.google.gson.GsonBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         val gson = GsonBuilder().create()
 
-        val util =StringUtility()
+        val util = StringUtility()
         println(util.getAString())
     }
 

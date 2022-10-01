@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.utilities
 
 class StringUtility {
     fun getAString() : String{
