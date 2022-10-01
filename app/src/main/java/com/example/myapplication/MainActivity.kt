@@ -33,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         val gson = GsonBuilder().create()
+
+        val util =StringUtility()
+        println(util.getAString())
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
