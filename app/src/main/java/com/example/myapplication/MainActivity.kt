@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -9,9 +10,11 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.utilities.StringUtility
-import com.google.gson.GsonBuilder
+
+const val TAG ="my_log_tag"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -33,10 +36,25 @@ class MainActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
 
-        val gson = GsonBuilder().create()
+        //val gson = GsonBuilder().create()
 
         val util = StringUtility()
         println(util.getAString())
+
+        myNewFunction()
+
+        Toast.makeText(this, "a message", Toast.LENGTH_SHORT).show()
+        Log.i(TAG, "onCreate: a custom message")
+    }
+
+    private fun myNewFunction() {
+        val myMessage = "hello from Android!"
+        println(myMessage)
+        saySomething()
+    }
+
+    private fun saySomething() {
+        println("something")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
